@@ -5,7 +5,7 @@ let cards = ["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o",
 // Create array to hold opened cards
 let openCard = [];
 let moves = 0;
-let starts = 3;
+//let starts = 3;
 let matchFound = 0;
 let startGame = false;
 let starRating = "3";
