@@ -10,6 +10,7 @@ let matchFound = 0;
 let startGame = false;
 let starRating = "3";
 let timer;
+let clickCount = 0;
 
 // Shuffle cards (function from http://stackoverflow.com/a/2450976)
 function shuffle(array) {
@@ -62,6 +63,16 @@ function findMatch() {
       setTimeout(removeOpenCards, 1100);
       moves++;
       }
+    }
+    //solving the clicking issue
+    clickCount++;
+    if(clickCount >= 2 ){
+      clickCount = 0 ;
+      $(".card").css("pointer-events", "none");
+      setTimeout(function (){
+          console.log("Fuck!!");
+          $(".card").css("pointer-events", "auto");
+      }, 1000);
     }
   updateMoves();
   })
